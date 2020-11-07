@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dog Harness</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" id="logo"><img src="icons/Logo.png" alt="logo"></a>
+		<div class="header-right">
+			<input type="text" name="searchBar" placeholder="Search..." id="textInput">
+			<img src="icons/searchIcon.png" alt="cart" id="searchIcon">
+			<a href="cart.html" id="cartButton">
+				<img src="icons/cartIconNew.png" alt="cart" id="cartIconNew">
+				<div id="cartAmount">
+					<p id="cartCount"></p>
+				</div>
+			</a>
+		</div>
+	</div>	
+	<nav class="navBar">
+		<a href="allProducts.html">ALL PRODUCTS</a>
+		<a href="">DOGS</a>
+		<a href="">CATS</a>
+		<a href="">ACCESSORIES</a>
+		<a href="about.html">ABOUT US</a>
+	</nav>
+	<div class="productContent">
+		<!-- another flexbox grid -->
+		<div class="productMain">
+			<div class="productMainImages">
+				<img src="productListImages/productDetailDogHarness1.png" id="mainImage" alt="harness">
+				<div class="productMainImagesSmall">
+					<img src="productListImages/productDetailDogHarness2.png" id="smallImage1" alt="harness2">
+					<img src="productListImages/productDetailDogHarness3.png" id="smallImage2" alt="harness3">
+					<img src="productListImages/productDetailDogHarness4.png" id="smallImage3" alt="harness4">
+					<img src="productListImages/productDetailDogHarness5.png" id="smallImage4" alt="harness4">
+				</div>	
+			</div>
+			<div class="productMainInfo">
+				<!-- product content -->
+				<h2 class="productMainTitle">Dog Harness</h2>
+				<h3 class="productMainPrice">$200.00</h3>
+				<p class="productMainCopy">Take your pup along with a harness that keep both you and your best friend comfortable and safe. With multiple loops and strap points you and your dog will be ready for whatever the great outdoors has to offer.</p>
+				<div class="reviews">
+					<img src="icons/StarHighlighted.png" alt="yellowstar">
+					<img src="icons/StarHighlighted.png" alt="yellowstar">
+					<img src="icons/StarHighlighted.png" alt="yellowstar">
+					<img src="icons/StarHighlighted.png" alt="yellowstar">
+					<img src="icons/StarGray.png" alt="graystar">
+					<a href="" class="reviewsList">REVIEWS (20)</a>
+				</div>
+				<div class="sizeInput">
+					<h4>Size</h4>
+					<!-- Changed the buttons to radio buttons to make the process easier to pass values -->
+					<input type="radio" id="tiny" name="size" value="tiny">
+  					<label for="tiny" onclick="fieldsCheck()">Tiny</label>
+  					<input type="radio" id="small" name="size" value="small">
+  					<label for="small" onclick="fieldsCheck()">Small</label>
+  					<input type="radio" id="medium" name="size" value="medium">
+  					<label for="medium" onclick="fieldsCheck()">Medium</label>
+  					<input type="radio" id="large" name="size" value="large">
+  					<label for="large" onclick="fieldsCheck()">Large</label>
+					<!-- <button class="sizeSelect">Tiny</button>
+					<button class="sizeSelect">Small</button>
+					<button class="sizeSelect">Medium</button>
+					<button class="sizeSelect">Large</button> -->
+				</div>
+				<div class="color">
+					<h4>Color</h4>
+					<!-- change these to modified radio buttons also. this was a nightmare i had to ada a label with something in it to make the radios functional like the size input. this is probably a durty way of doing this -->
+					<input type="radio" id="strawberry" name="color" value="strawberry">
+					<label for="strawberry" id="strawberrySelect" onclick="fieldsCheck();strawberrySelect();">.</label>
+  					<input type="radio" id="blackberry" name="color" value="blackberry">
+  					<label for="blackberry" id="blackberrySelect" onclick="fieldsCheck();blackberrySelect();">.</label>
+  					<input type="radio" id="crazyberry" name="color" value="crazyberry">
+  					<label for="crazyberry" id="crazyberrySelect" onclick="fieldsCheck();crazyberrySelect();">.</label>
+  					<input type="radio" id="fireOrange" name="color" value="fireOrange">
+  					<label for="fireOrange" id="fireOrangeSelect"  onclick="fieldsCheck();fireOrangeSelect();">.</label>
+					<!-- <div class="colorSelect" id="strawberrySelect"></div>
+					<div class="colorSelect" id="blackberrySelect"></div>
+					<div class="colorSelect" id="crazyberrySelect"></div>
+					<div class="colorSelect" id="fireOrangeSelect"></div> -->
+				</div>
+				<!-- added quantity option after heuristic eval -->
+				<div class="qty">
+					<label for="qty">QTY</label>
+  					<input type="number" name="qty" min="1" max="99" id="qty" onclick="fieldsCheck()">
+				</div>
+				<!-- changed to input type button to easily add js -->
+				<input type="button" id="addToCart" value="ADD TO CART" onclick="addToCart()" disabled>
+				<!-- <button class="addToCart">ADD TO CART</button> -->
+			</div>
+		</div>
+		<!-- horizontal rule not visable in column flexbox -->
+		<hr class="lineBreak">
+		<div class="productSecondaryInfo">
+			<div class="productDetails">
+				<h2>Product Details</h2>
+				<h3>Materials</h3>
+				<p>Breathable mesh allows moisture to escape and helps regulate temperature in hot or cold environments</p>
+				<h3>Ergonomic Design</h3>
+				<p>Countless hours of testing has allowed our team to create a product that will fit just about any size or shape of dog</p>
+				<h3>Attachment Ready</h3>
+				<p>Loops, straps, clips and Velcro allow you to outfit your dog with any of our essential hiking pet accessories</p>
+			</div>
+			<div class="sizeChart">
+				<!-- decided to make the chart in HTML/CSS instead of linking a graphic -->
+				<!-- now the chart is responsive and styles can be updated -->
+				<h2>Size Chart</h2>
+				<h4>Find the fit for your unique friend</h4>
+				<div class="chart">
+					<div class="chartTitle">Size</div>
+					<div class="chartTitle">Chest</div>
+					<div class="chartTitle">Length</div>
+					<div class="chartTitle">Weight</div>
+					<div class="chartData">Tiny</div>
+					<div class="chartData">2"-10"</div>
+					<div class="chartData">6"-10"</div>
+					<div class="chartData">.5 lbs</div>
+					<div class="chartData">Small</div>
+					<div class="chartData">11"-13"</div>
+					<div class="chartData">11"-16"</div>
+					<div class="chartData">1 lbs</div>
+					<div class="chartData">Medium</div>
+					<div class="chartData">14"-16"</div>
+					<div class="chartData">17"-25"</div>
+					<div class="chartData">2 lbs</div>
+					<div class="chartData">Large</div>
+					<div class="chartData">17"+</div>
+					<div class="chartData">16"+</div>
+					<div class="chartData">4 lbs+</div>
+				</div>
+			</div>
+		</div>
+		<hr class="lineBreak">
+		<div class="productRelated">
+			<h2>You Might Also Like:</h2>
+			<div class="productsList" id="related">
+				<!-- called on the products list code from the all products page -->
+				<a href="" class="productListItem">
+					<img src="productListImages/dogHarness.png" alt="harness">
+					<h4 class="productName">Dog Harness</h4>
+					<p class="productDescription">Take your pup along with a harness that keep both you and your best friend comfortable and safe</p>
+					<img src="images/colorOptions.png" alt="colors">
+					<h5 class="price">$200.00</h5>
+				</a>
+				<a href="" class="productListItem">
+					<img src="productListImages/catHarness.png" alt="charness">
+					<h4 class="productName">Cat Harness</h4>
+					<p class="productDescription">Your feline best friend will love to enjoy your adventure safely by your side</p>
+					<img src="images/colorOptions.png" alt="colors">
+					<h5 class="price">$200.00</h5>
+				</a>
+				<a href="" class="productListItem">
+					<img src="productListImages/catBackpack.png" alt="catbp">
+					<h4 class="productName">Cat Backpack</h4>
+					<p class="productDescription">Your wont have to walk if they are feeling extra lazy, just try the cat backpack</p>
+					<img src="images/colorOptions.png" alt="colors">
+					<h5 class="price">$200.00</h5>
+				</a>
+				<a href="" class="productListItem">
+					<img src="productListImages/foodStorageAttachment.png" alt="foodstorage">
+					<h4 class="productName">Food Storage Attachment</h4>
+					<p class="productDescription">While y’all are out on the trail, you carry your own food. 	Now its time for your pet to share the load.</p>
+					<img src="images/colorOptions.png" alt="colors">
+					<h5 class="price">$50.00</h5>
+				</a>
+			</div>
+		</div>
+
+	</div>
+	
+</body>
+</html>

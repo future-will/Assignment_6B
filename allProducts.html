@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Products</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" id="logo"><img src="icons/Logo.png" alt="logo"></a>
+		<div class="header-right">
+			<input type="text" name="searchBar" placeholder="Search..." id="textInput">
+			<img src="icons/searchIcon.png" alt="cart" id="searchIcon">
+			<a href="cart.html" id="cartButton">
+				<img src="icons/cartIconNew.png" alt="cart" id="cartIconNew">
+				<div id="cartAmount">
+					<p id="cartCount"></p>
+				</div>
+			</a>
+		</div>
+	</div>	
+	<nav class="navBar">
+		<a href="allProducts.html">ALL PRODUCTS</a>
+		<a href="">DOGS</a>
+		<a href="">CATS</a>
+		<a href="">ACCESSORIES</a>
+		<a href="about.html">ABOUT US</a>
+	</nav>
+	<!-- creating a flexbox layout to aid in reponsive design -->
+	<h2 class="productsListTitle">All Products</h2>
+	<div class="bodyContent">
+		<div class="filter">
+			<!-- left-side filter menu -->
+			<!-- separate classes for hierarchy -->
+			<h3 class="filterTitle">Filter Your Serach</h3>
+			<h3 class="filterCatagory">Pet</h3>
+			<a href="" class="filterOption"><div class="filterSelect"></div>Dog</a>
+			<a href="" class="filterOption"><div class="filterSelect"></div>Cat</a>
+			<h3 class="filterCatagory">Product Type</h3>
+			<a href="" class="filterOption"><div class="filterSelect"></div>Harnesses</a>
+			<a href="" class="filterOption"><div class="filterSelect"></div>Backpacks</a>
+			<a href="" class="filterOption"><div class="filterSelect"></div>Connectivity</a>
+			<a href="" class="filterOption"><div class="filterSelect"></div>Food Storage</a>
+			<a href="" class="filterOption"><div class="filterSelect"></div>Water Storage</a>
+			<h3 class="filterCatagory">Size</h3>
+			<a href="" class="filterOption"><div class="filterSelect"></div>Tiny</a>
+			<a href="" class="filterOption"><div class="filterSelect"></div>Small</a>
+			<a href="" class="filterOption"><div class="filterSelect"></div>Medium</a>
+			<a href="" class="filterOption"><div class="filterSelect"></div>Large</a>
+			<h3 class="filterCatagory">Color</h3>
+			<!-- used ids here to account for different check box color -->
+			<a href="" class="filterOption" id="strawberry1"><div class="filterSelect" id="strawberry"></div>Strawberry</a>
+			<a href="" class="filterOption" id="blackberry1"><div class="filterSelect" id="blackberry"></div>Blackberry</a>
+			<a href="" class="filterOption" id="crazyberry1"><div class="filterSelect" id="crazyberry"></div>Crazyberry</a>
+			<a href="" class="filterOption" id="fireOrange1"><div class="filterSelect" id="fireOrange"></div>Fire Orange</a>
+
+		</div>
+		<div class="productsList">
+			<!-- created separate product items -->
+			<!-- will use script in the future to make the content editable -->
+			<a href="productDetail.html" class="productListItem">
+				<img src="productListImages/dogHarness.png" alt="dogharness">
+				<h4 class="productName">Dog Harness</h4>
+				<p class="productDescription">Take your pup along with a harness that keep both you and your best friend comfortable and safe</p>
+				<img src="images/colorOptions.png" alt="colors">
+				<h5 class="price">$200.00</h5>
+			</a>
+			<a href="" class="productListItem">
+				<img src="productListImages/catHarness.png" alt="catharness">
+				<h4 class="productName">Cat Harness</h4>
+				<p class="productDescription">Your feline best friend will love to enjoy your adventure safely by your side</p>
+				<img src="images/colorOptions.png" alt="colors">
+				<h5 class="price">$200.00</h5>
+			</a>
+			<a href="" class="productListItem">
+				<img src="productListImages/catBackpack.png" alt="backBP">
+				<h4 class="productName">Cat Backpack</h4>
+				<p class="productDescription">Your wont have to walk if they are feeling extra lazy, just try the cat backpack</p>
+				<img src="images/colorOptions.png" alt="colors">
+				<h5 class="price">$200.00</h5>
+			</a>
+			<a href="" class="productListItem">
+				<img src="productListImages/foodStorageAttachment.png" alt="foodstorage">
+				<h4 class="productName">Food Storage Attachment</h4>
+				<p class="productDescription">While y’all are out on the trail, you carry your own food. Now its time for your pet to share the load.</p>
+				<img src="images/colorOptions.png" alt="colors">
+				<h5 class="price">$50.00</h5>
+			</a>
+			<a href="" class="productListItem">
+				<img src="productListImages/waterStorageAttchment.png" alt="waterstorage">
+				<h4 class="productName">Water Storage Attachment</h4>
+				<p class="productDescription">We all get thirsty.  Make sure your fuzzy companion has plenty of water while in the backwoods.</p>
+				<img src="images/colorOptions.png" alt="colors">
+				<h5 class="price">$50.00</h5>
+			</a>
+			<a href="" class="productListItem">
+				<img src="productListImages/hikingLeash.png" alt="leash">
+				<h4 class="productName">Hiking Leash</h4>
+				<p class="productDescription">Give your buddy some breathing room with the extra long leash. There's lots to explore out there.</p>
+				<img src="images/colorOptions.png" alt="colors">
+				<h5 class="price">$80.00</h5>
+			</a>
+			<a href="" class="productListItem">
+				<img src="productListImages/dogShades.png" alt="shades">
+				<h4 class="productName">Dog Shades</h4>
+				<p class="productDescription">The sun can damage Your eyes. Your pup has eyes, so don’t forget to keep their peepers safe too.</p>
+				<img src="images/colorOptions.png" alt="colors">
+				<h5 class="price">$100.00</h5>
+			</a>
+			<a href="" class="productListItem">
+				<img src="productListImages/GPSHarnessAttchment.png" alt="gps">
+				<h4 class="productName">GPS Harness Attachment</h4>
+				<p class="productDescription">We all get lost from time to time, but now you and your sidekick can find the way home</p>
+				<img src="images/colorOptions.png" alt="colors">
+				<h5 class="price">$1000.00</h5>
+			</a>
+		</div>
+	</div>
+	
+</body>
+</html>

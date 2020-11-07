@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Muddy Paws - Home</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" id="logo"><img src="icons/Logo.png" alt="logo"></a>
+		<div class="header-right">
+			<input type="text" name="searchBar" placeholder="Search..." id="textInput">
+			<img src="icons/searchIcon.png" alt="cart" id="searchIcon">
+			<a href="cart.html" id="cartButton">
+				<img src="icons/cartIconNew.png" alt="cart" id="cartIconNew">
+				<div id="cartAmount">
+					<p id="cartCount"></p>
+				</div>
+			</a>
+		</div>
+	</div>	
+	<nav class="navBar">
+		<!-- nav bar will be changed to a dropdown in the future, this feels crowded -->
+		<a href="allProducts.html">ALL PRODUCTS</a>
+		<a href="">DOGS</a>
+		<a href="">CATS</a>
+		<a href="">ACCESSORIES</a>
+		<a href="about.html">ABOUT US</a>
+	</nav>
+	<div id="hero">
+		<!-- main content imagery -->
+		<div id="heroText">
+			<h1>Adventure Awaits</h1>
+			<h2>for you and your besties!</h2>			
+		</div>
+		<a href="allProducts.html"><h3 id="shopAllProducts">SHOP ALL PRODUCTS</h3></a>
+	</div>
+	<div class="content">
+		<!-- first big use of flexbox -->
+		<div class="feature">
+			<div class="featureDetail">
+				<!-- nested flexboxes -->
+				<h2>Keep Track of Your Hiking Partner</h2>
+				<p>We all get lost from time to time, but now you and your sidekick can find the way home</p>
+				<p id="colorOptions">4 Color Options</p>
+				<img src="images/colorOptions.png" id="colors" alt="color options">
+				<button class="callToAction">SHOP</button>
+			</div>
+			<img src="images/GPS.png" id="gps" alt="gps">
+		</div>
+		<div class="social">
+			<!-- this section gave me difficulties -->
+			<!-- attemped to create a grid -->
+			<!-- will change with script -->
+			<h2>Share Your Adventure</h2>
+			<div class="socialElements">
+				<img src="images/Social1.png" alt="social large">
+				<div id="socialElementsSmall">
+					<a href=""><div id="ig">
+						<img src="icons/InstaIcon.png" alt="IG icon">
+						<h3 class="accountname">@muddypaws</h3>
+					</div></a>
+					<a href=""><div id="fb">
+						<img src="icons/FBIcon.png" alt="FB icon">
+						<h3 class="accountname">/muddypaws</h3>
+					</div></a>
+					<div id="social2-3">
+						<img src="images/Social2.png" alt="social image small2">
+						<img src="images/Social3.png" alt="social image small3">
+					</div>
+				</div>	
+			</div>
+		</div>	
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,1028 @@
+body{
+	/*had to use this to let header bleed to edge of browser*/
+	margin: 0;
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #F0F0F0;
+	height: 93px;
+	margin:0;
+
+}
+.header-right{
+	height: 40px;
+	margin-right: 5%;
+}
+.header-right input[type=text] {
+  	font-family: 'Roboto', sans-serif;
+  	/*should just call font fmaily in the body next time, stop multiple instances*/
+  	font-size: 14pt;
+  	font-weight: 300;
+  	float: left;
+  	padding-top: 10px;
+  	padding-bottom: 5px;
+  	margin-top: 0px;
+  	margin-right: 10px;
+  	border-bottom: 2px solid #566141;
+  	border-top: none;
+  	border-right: none;
+  	border-left: none;
+  	box-sizing: border-box;
+  	font-size: 17px;
+  	/*rgba to make transparent background color*/
+  	background-color: rgba(0,0,0,0);
+ }
+#cartButton{
+	float: right;
+	border-radius: 8px;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border: 2px solid #E3C59F;
+	margin-top: 0;
+	text-decoration: none;
+}
+#cartButton:hover{
+	background-color: #E3C59F; 
+	/*added cool transitions to keep changes from being so stark*/
+	transition: all .25s;
+}
+#cartIconNew{
+	height: 30px;
+	margin: 6px;
+}
+#cartAmount{
+	font-family: 'Roboto', sans-serif;
+	color: #566141;
+	margin-right: 6px;
+	/*This will toggle the visibility of the cart count in the header*/
+	/*and will be changed using js and local storage*/
+	display: none;
+}
+#logo{
+	float: left;
+	/*margin-top: 20px;*/
+	margin-left: 5%;
+}
+#searchIcon{
+	padding: 5px 10px 5px 0px;
+}
+.navBar{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	background-color: #F0F0F0;
+	height: 38px;
+	margin:0;
+	padding-left: 5%;
+}
+.navBar a{
+	flex-basis: content;
+	margin: 0 20px 0 20px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12pt;
+	font-weight: 500;
+	color: #566141;
+	letter-spacing: 3px;
+}
+.navBar a:hover{
+	color: #E3C59F;
+	transition: all .25s;
+}
+.footer{
+	/*ended up removing, wasn't behaving as intented*/
+	background-color: #F0F0F0;
+	height: 50px;
+	width: 100%;
+	
+	bottom: 0;
+	
+}
+.content{
+
+	width: 90%;
+	height: 400px;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 27px auto auto auto;
+}
+.feature{
+	width: 50%;
+	color: #566141;
+	display: flex;
+	flex-direction:  row;
+	max-width: 454px;
+
+	justify-content: flex-end;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;	
+	margin-right: 5%;
+}
+.feature h2{
+	font-size: 20pt;
+	font-weight: 500;
+	margin: 2px 0 10px 0;
+}
+.feature p{
+	font-size: 12pt;
+	font-weight: 100;
+}	
+#colorOptions{
+	font-size: 8pt;
+	font-weight: 100;
+}
+.featureDetail{
+	padding-left: 0;
+	padding-right: 5%;
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+}
+.callToAction{
+	/*made too many similar button classes, will try to reuse more often with addition of ids*/
+	margin-top: 20px;
+	padding: 10px;
+	border: none;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 13pt;
+	font-weight: 500;
+	text-decoration: none;
+	letter-spacing: 3px;
+	text-align: center;
+	background-color: #566141;
+	border-radius: 8px;
+}
+.callToAction:hover{
+	background-color: #E3C59F;
+	transition: all .25s;
+}
+#colors{
+	/*kept image from being streched*/
+	align-self: flex-start; 
+}
+#gps{
+	margin-top: 5%;
+	margin-right: 0;
+	align-self: flex-start;
+}
+.social{
+	/*major flex issues here*/
+	/*should completely redo in the future*/
+	width: 50%;
+	height: 342px;
+	color: #55636F;
+	max-width: 454px;
+
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;	
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	background-color: #F0F0F0;
+	margin-left: 5%;
+	
+}
+.social h2{
+	padding-left: 5%; 
+	font-size: 20pt;
+	font-weight: 500;
+}
+.social h3{
+	margin: 0;
+	font-size: 12pt;
+	font-weight: 500;
+}
+.social a{
+	text-decoration: none;
+	color: #55636F;
+
+}
+.social a:hover h3{
+	color: #E3C59F;
+	transition: .25s;
+
+}
+.socialElements{
+	display: flex;
+	padding-left: 5%;
+}
+#socialElementsSmall{
+	display: flex;
+	flex-direction: column;	
+	justify-content: flex-end;
+	margin-left: 18px;
+	justify-content: space-between;
+}
+#ig{
+	margin-top: 23px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-content: center;
+
+}
+#ig img{
+	align-self: center;
+	flex-basis: content;
+	margin-right: 5px;
+
+}
+.accountName{
+	margin: auto;
+	align-self: flex-start;
+	flex-basis: content;
+
+}
+#fb{
+	margin-top: 23px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-content: center;
+
+}
+#fb img{
+	align-self: center;
+	flex-basis: content;
+	margin-right: 5px;
+
+}
+#social2-3{
+	margin-top:30px;
+	flex-basis: content;
+}
+
+#hero{
+	background-image:url("images/pexels-spencer-gurley-1448053.jpg");
+	background-position: center;
+	background-size: 100%;
+	width: 90%;
+	height: 460px;
+	overflow: hidden;
+	margin: 24px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1200px
+}
+
+#hero h1{
+	margin:21px 0px 0px 0px;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 32pt;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: 2px 2px 4px rgba(0,0,0, .42);
+}
+
+#hero h2{
+	margin:0;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16pt;
+	font-weight: 500;
+	text-align: center;
+	text-shadow: 2px 2px 4px rgba(0,0,0, .42);
+}
+#hero a{
+	text-decoration: none;
+}
+#shopAllProducts{
+	width: 250px;
+	padding: 10px;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 13pt;
+	font-weight: 500;
+	letter-spacing: 3px;
+	text-align: center;
+	background-color: rgba(185, 181, 170, .59);
+	border-radius: 8px;
+	
+}
+#shopAllProducts:hover{
+	background-color: #E3C59F;
+	transition: all .25s;
+}
+.productsListTitle{
+	margin:30px auto 8px 22%;
+	padding-left: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20pt;
+	color: #566141;
+	font-weight: 500;
+}
+.bodyContent{
+	/*could prob reuse .content rather than redoing this code*/
+	display: flex;
+	width: 90%;
+	margin: auto;
+	justify-content: center;
+	font-family: 'Roboto', sans-serif;
+}
+.bodyContent a{
+	text-decoration: none;
+}
+.filter{
+	flex-basis: 15%;
+	margin-top: 12px;
+	margin-left: 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.filter h3, a{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+.filterTitle{
+	color: #696969;
+	font-size: 14pt;
+	font-weight: 500;
+	padding-bottom: 5px;
+}
+.filterCatagory{
+	font-size: 12pt;
+	font-weight: 500;
+	color: #566141; 
+	margin-left: 10px;
+}
+.filterOption{
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	margin-left: 10px;
+	color: #566141;
+	font-size: 10pt;
+	font-weight: 300;
+}
+.filterSelect{
+	/*cheap workaround for not being able to affect the html checkbox*/
+	height: 8px;
+	width: 8px;
+	border: 1px solid #566141;
+	margin-right: 10px;
+}
+.filterOption:hover .filterSelect{
+	background-color: #566141;
+}
+/*different ids for the unique color instances*/
+#strawberry{
+	border-color: #FF5071;
+}
+#strawberry1:hover .filterSelect{
+	background-color: #FF5071;
+}
+#blackberry{
+	border-color: #300D46;
+}
+#blackberry1:hover .filterSelect{
+	background-color: #300D46;
+}
+#crazyberry{
+	border-color: #50E9CD;
+}
+#crazyberry1:hover .filterSelect{
+	background-color: #50E9CD;
+}
+#fireOrange{
+	border-color: #FF4C00;
+}
+#fireOrange1:hover .filterSelect{
+	background-color: #FF4C00;
+}
+/*styling the list itself*/
+.productsList{
+	display: flex;
+	flex-basis: 85%;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	color: #566141;
+	margin-bottom: 60px;
+}
+
+.productListItem{
+	height: 372px;
+	flex-basis: 183px;
+	margin:10px 16px 22px 16px;
+	padding: 2px;
+	color: #566141;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.productListItem h4{
+	margin:2px 10px 2px 2px;
+	font-size: 10pt;
+	font-weight: 500;
+}
+.productListItem p{
+	margin:2px 10px auto 2px;
+	font-size: 10pt;
+	font-weight: 300;
+}
+.productListItem h5{
+	margin:4px 10px 4px 2px;
+
+}
+.productListItem img:nth-of-type(2){
+	margin: 6px 12px 6px 4px;
+	width: 40%;
+}
+.productListItem:hover{
+	border: 2px solid #E3C59F;
+	margin:8px 14px 20px 14px;
+
+}
+.productContent{
+	
+	width: 90%;
+	margin: 30px auto auto auto;
+	
+	
+	font-family: 'Roboto', sans-serif;
+}
+/*for the individual products*/
+.productMain{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1030px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.productMainImages{
+	flex-basis: 566px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+#mainImage{
+	align-self: flex-end;
+	margin-right: 40px;
+	width: 565px;
+	height: 483px;
+}
+.productMainImagesSmall{
+	margin-top: 20px;
+	align-self: flex-start;
+	margin-right: 40px;
+}
+.productMainImagesSmall img{
+	margin-right: 20px;
+}
+.productMainInfo{
+	/*again could probably use .content*/
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	flex-basis: 400px;
+	margin-left: 30px;
+	font-family: 'Roboto', sans-serif;
+	color: #566141;
+	height: 483px;
+}
+.productMainTitle{
+	font-size: 28pt;
+	font-weight: 500;
+	margin: 0 auto 12px 0;
+}
+.productMainPrice{
+	font-size: 14pt;
+	font-weight: 600;
+	margin: 0 auto 12px 0;
+	color: #696969;
+}
+.productMainCopy{
+	font-size: 10pt;
+	font-weight: 300;
+	margin: 0 25% 12px 0;
+	color: #696969;
+}
+
+/*Updating the button to radios to make the js a bit easier*/
+
+.sizeInput{
+	display: flex;
+	align-items: center;
+	margin: 10px 20px 8px 0;
+}
+.sizeInput input[type="radio"]{
+	/*hidding the actual radio circle and making the label the thing we select*/
+	opacity: 0;
+	position: fixed;
+	width: 0;
+}
+.sizeInput label{
+	/*styling the labels to make them appear as buttons style is take from previous .sizeselect
+	from pervious iteration*/
+	font-size: 8pt;
+	font-weight: 600;
+	margin: 10px 2px 12px 2px;
+	color: #696969;
+	padding: 4px 10px 4px 10px;
+	border: none;
+	text-decoration: none;
+	text-align: center;
+	background-color: rgba(86,97,65,.11);
+	border-radius: 4px;
+}
+.sizeInput label:hover{
+	/*again stealing the contents from .sizeselect but this time from the hover state*/
+	outline: 0;
+	text-decoration: none;
+	background-color: #566141;
+	color: white;
+	transition: .25s;
+}
+.sizeInput input[type="radio"]:checked + label{
+	/*now i am applying the style to the label corresponding to the checked radio button (which is hedden)*/
+	outline: 0;
+	text-decoration: none;
+	background-color: #566141;
+	color: white;
+}
+.sizeInput h4{
+	font-size: 14pt;
+	font-weight: 600;
+	margin: 10px 20px 12px 0;
+	color: #696969;
+}
+
+/*.sizeSelect{
+	font-size: 8pt;
+	font-weight: 600;
+	margin: 10px 2px 12px 2px;
+	color: #696969;
+	padding: 4px 10px 4px 10px;
+	border: none;
+	text-decoration: none;
+	text-align: center;
+	background-color: rgba(86,97,65,.11);
+	border-radius: 4px;
+}
+
+.sizeSelect:hover{
+	outline: 0;
+	text-decoration: none;
+	background-color: #566141;
+	color: white;
+	transition: .25s;
+}
+.sizeSelect:focus{
+	
+	outline: 0;
+	text-decoration: none;
+	background-color: #566141;
+	color: white;
+	transition: .25s;
+}*/
+.color{
+	display: flex;
+	align-items: center;
+	margin: 8px 20px 12px 0;
+}
+.color h4{
+	font-size: 14pt;
+	font-weight: 600;
+	margin: 10px 18px 12px 0;
+	color: #696969;
+}
+.color input[type="radio"]{
+	/*hidding the actual radio circle and making the label the thing we select*/
+	opacity: 0;
+	position: fixed;
+	width: 0;
+}
+.color label{
+	/*styling the labels to make them appear as buttons style is take from previous .sizeselect
+	from pervious iteration*/
+	font-size: 8pt;
+	font-weight: 600;
+	margin: 10px 2px 12px 2px;
+	padding: 4px 10px 4px 10px;
+	border: none;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 4px;
+}
+
+/*.colorSelect{
+	
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	margin-right: 10px;
+}*/
+#strawberrySelect{
+	background-color: #FF5071;
+	color: #FF5071;
+}
+#strawberrySelect:hover{
+	border: 2px solid #E3C59F;
+	padding: 2px 8px 2px 8px;	
+}
+#blackberrySelect{
+	background-color: #300D46;
+	color: #300D46;
+}
+#blackberrySelect:hover{
+	border: 2px solid #E3C59F;
+	padding: 2px 8px 2px 8px;	
+}
+#crazyberrySelect{
+	background-color: #50E9CD;
+	color: #50E9CD;
+}
+#crazyberrySelect:hover{
+	border: 2px solid #E3C59F;
+	padding: 2px 8px 2px 8px;	
+}
+#fireOrangeSelect{
+	background-color: #FF4C00;
+	color: #FF4C00;
+}
+#fireOrangeSelect:hover{
+	border: 2px solid #E3C59F;
+	padding: 2px 8px 2px 8px;	
+}
+.color input[type="radio"]:checked + label{
+	border: 2px solid #E3C59F;
+	padding: 2px 8px 2px 8px;
+}
+
+.reviews{
+	margin: 10px 20px 12px 0;
+	display: flex;
+	align-items: center;
+}
+.reviews img{
+	margin-right: 4px;
+	width: 28px;
+}
+.reviewsList{
+	margin: 8px auto auto 8px;
+	text-decoration: none;
+	color: #4884B7;
+	font-size: 10pt;
+	font-weight: 600;
+}
+.reviewsList:hover{
+	color: #E3C59F;
+	transition: .25s;
+}
+.qty{
+	font-size: 14pt;
+	font-weight: 600;
+	margin: 10px 20px 12px 0;
+	color: #696969; 
+}
+.qty input{
+	/*style of the input to mach the branding*/
+	height: 24px;
+	border: 2px solid #566141;
+	border-radius: 8px;
+	text-align: center;
+	padding-left: 12px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 800;
+	font-size: 12pt;
+	color: #696969;
+	margin-left: 20px;
+
+}
+
+#addToCart{
+	margin:auto auto 10px 0;
+	width: 250px;
+	padding: 14px;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16pt;
+	font-weight: 500;
+	letter-spacing: 3px;
+	text-align: center;
+	background-color: #566141;
+	border-radius: 8px;
+	border:none;
+}
+#addToCart:hover{
+	background-color: #E3C59F;
+	transition: .25s;
+}
+#addToCart:disabled{
+	background-color: #989B93;
+	transition: .25s;
+}
+.productSecondaryInfo{
+	display: flex;
+	justify-content: center;
+	width: 90%;
+	max-width: 1030px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.productDetails{
+	width: 50%;
+	color: #696969;
+	
+}
+.productDetails h2{
+	font-size: 18pt;
+	font-weight: 500;
+	margin: 8px auto 30px 0;
+	color: #566141;
+}
+.productDetails h3{
+	font-size: 14pt;
+	font-weight: 500;
+	margin: 0 auto 8px 0;
+}
+.productDetails p{
+	font-size: 10pt;
+	font-weight: 300;
+	margin: 0 10% 32px 0;
+}
+.sizeChart{
+	color: #55636F;
+	width: 50%;
+	background-color: #F0F0F0;
+	margin-top: 20px;
+}
+.sizeChart h2{
+	font-size: 18pt;
+	font-weight: 500;
+	margin: 14px auto 4px 14px;
+	
+}
+.sizeChart h4{
+	font-size: 12pt;
+	font-weight: 500;
+	margin: 8px auto 10px 14px;
+}
+/*style for the chart, pretty simple*/
+.chart{
+	display: flex;
+	width: 90%;
+	margin: auto auto 30px auto;
+	flex-wrap: wrap;
+}
+.chartTitle{
+	color: #55636F;
+	background-color: #F0F0F0;
+	width: 24%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 10pt;
+	font-weight: 500;
+	padding-top: 14px; 
+	padding-bottom: 7px; 
+}
+.chartData{
+	color: #F0F0F0;
+	background-color: #55636F;
+	width: 24%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #F0F0F0;
+	padding-top: 14px; 
+	padding-bottom: 14px; 
+	font-size: 10pt;
+	font-weight: 300;
+}
+.lineBreak{
+	width: 90%;
+	max-width: 1350px;
+	margin:30px auto 10px auto;
+	border-top: 2px solid #566141;
+}
+.productRelated{
+	width: 90%;
+	max-width: 1030px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.productRelated h2{
+	font-size: 14pt;
+	font-weight: 500;
+	margin: 14px auto 12px 0;
+	color: #566141;
+}
+#related{
+	justify-content: center;
+}
+.aboutContent{
+	/*again, could just use .content*/
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	max-width: 1030px;
+	margin: auto;
+	font-family: 'Roboto', sans-serif;
+}
+.aboutContent h1{
+	font-size: 20pt;
+	color: #566141;
+	font-weight: 500;
+	margin-top: 50px;
+}
+.aboutHero{
+	/*not img object, called here as background*/
+	background-image: url("images/aboutUs.png");
+	height: 440px;
+	background-position: center;
+	background-size: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.aboutCallOut{
+	/*the text inside the main image*/
+	width: 35%;
+	
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 22px 22px 22px 22px;
+}
+.aboutCallOut h2{
+	font-size: 30pt;
+	font-weight: 500;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-shadow: 0px 0px 4px rgba(0,0,0,.2);
+}
+#about2{
+	/*made an id to differentiate and style separately*/
+	align-self: flex-end;
+	text-align: right;
+}
+.aboutDetails{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	max-height: 500px;
+	margin-top: 28px;
+}
+.aboutDetailsSection{
+	color: #696969;
+	width: 40%;
+	height: 33.33%;
+	margin-left: 20px;
+
+}
+.aboutDetailsSection h3{
+	font-size: 16pt;
+	font-weight: 500;
+	margin:0 auto 0 0;
+}
+.aboutDetailsSection p{
+	font-size: 12pt;
+	font-weight: 300;
+	margin: 8px auto 28px 0;
+}
+#customerService{
+	font-weight: 500;
+	margin-top: 28px;
+	margin-bottom: 0;
+}
+
+/* New Page: Cart*/
+
+#activeCartButton{
+	/*Since this is on the cart page, i chose to remove the hover and set set BG as the selected color*/
+	background-color: #E3C59F;
+	float: right;
+	border-radius: 8px;
+	height: 40px;
+	}
+.cartTitles{
+	display: flex;
+	flex-direction: row;
+	color: #566141;
+	font-size: 10pt;
+	font-weight: 500;
+	padding-top: 0; 
+	padding-bottom: 0; 
+}
+/*.cartTitle{
+	margin: 0 25% 12px 0;
+}*/
+#items{
+	padding-left: 5%;
+	/*flex-grow: 3;*/
+	width: 45%;
+}
+#quantity{
+	/*flex-grow: 1;*/
+	width: 10%;
+	text-align: center;
+}
+#price{
+	/*flex-grow: 2;*/
+	width: 20%;
+	text-align: center;
+}
+hr{
+	border: 2px solid #566141;
+	margin: 0 0 12px 0;
+}
+/*style for the contents of the cart probably a placeholder, I will know better when i add java script*/
+.cartItem{
+	display: flex;
+	flex-direction: row;
+	color:#566141;
+	font-size: 10pt;
+	margin-bottom: 18px;
+}
+.cartItemMain{
+	display: flex;
+	flex-direction: row;
+	/*flex-grow: 1;*/
+	width: 45%;
+	padding-left: 5%;
+}
+.cartItemImage{
+	
+	height: 148px;
+}
+.cartItemMainDetails{
+	padding-left: 5%;
+}
+.cartItemName{
+	margin-bottom: 15px;
+}
+.cartItemDetails{
+	font-weight: 300;
+	margin-top: 15px;
+}
+.cartItemQuantity{
+	/*flex-grow: 1;*/
+	width: 10%;
+	text-align: center;
+	/*padding-left: 5%;*/
+	
+}
+.cartItemPrice{
+	/*flex-grow: 1;
+	text-align: center;*/
+	width: 20%;
+	text-align: center;
+}
+.remove{
+	width: 15%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	padding-right: 5%;
+}
+.remove h3{
+	padding-left: 6px;
+}
+
+.removeButton{
+	align-self: flex-start;
+	margin: 12px 0 auto 0;
+}
+/*checkout section*/
+.checkoutPrice{
+	width: 20%;
+	float: right;
+}
+.checkoutPriceItem{
+	color: #696969;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.checkoutPriceItem h2{
+	margin: 6px 0 6px 0;
+	font-size: 18px;
+}
+#checkoutButton{
+	width: 100%;
+	margin-bottom: 120px;
+}
+
+
+

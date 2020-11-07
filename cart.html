@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" id="logo"><img src="icons/Logo.png" alt="logo"></a>
+		<div class="header-right">
+			<input type="text" name="searchBar" placeholder="Search..." id="textInput">
+			<img src="icons/searchIcon.png" alt="cart" id="searchIcon">
+			<a href="cart.html" id="cartButton">
+				<img src="icons/cartIconNew.png" alt="cart" id="cartIconNew">
+				<div id="cartAmount">
+					<p id="cartCount"></p>
+				</div>
+			</a>
+		</div>
+	</div>	
+	<nav class="navBar">
+		<!-- nav bar will be changed to a dropdown in the future, this feels crowded -->
+		<a href="allProducts.html">ALL PRODUCTS</a>
+		<a href="">DOGS</a>
+		<a href="">CATS</a>
+		<a href="">ACCESSORIES</a>
+		<a href="about.html">ABOUT US</a>
+	</nav>
+	
+	<div class="aboutContent">
+		<h1>Your Cart</h1>
+		<div class="cartContent">
+			<div class="cartTitles">
+				<h2 class="cartTitle" id="items">Item</h2>
+				<h2 class="cartTitle" id="quantity">Quantity</h2>
+				<h2 class="cartTitle" id="price">Price</h2>
+			</div>
+			<hr>
+			<div class="cartItem">
+				<!-- used nested flex boxes -->
+				<div class="cartItemMain">
+					<img src="productListImages/productDetailDogHarness1.png" alt="dogharness" class="cartItemImage">
+					<div class="cartItemMainDetails">
+						<h2 class="cartItemName">Dog Harness</h2>
+						<h3 class="cartItemDetails"><span class="cartItemColor">Crazy Berry</span> | <span class="cartItemSize">Large</span></h3>
+					</div>	
+				</div>
+				<h3 class="cartItemQuantity">1</h3>
+				<h3 class="cartItemPrice">$<span class="cartItemPriceNum">200.00</span></h3>
+				<div class="remove">
+					<img src="icons/remove.png" alt="remove button" class="removeButton">
+					<h3>Remove</h3>
+				</div>
+
+			</div>
+			<hr>
+			<div class="checkoutPrice">
+				<div class="checkoutPriceItem">
+					<h2>Shipping:</h2>
+					<h2 class="shippingPrice">$<span class="shippingPriceNum">0.00</span></h2>
+				</div>
+				<div class="checkoutPriceItem">
+					<h2>Shipping:</h2>
+					<h2 class="totalPrice">$<span class="totalPriceNum">200.00</span></h2>
+				</div>
+				<button class="callToAction" id="checkoutButton">CHECKOUT</button>
+			</div>
+		</div>
+		<div class="productRelated">
+			<h2>You Might Also Like:</h2>
+			<div class="productsList" id="related">
+				<!-- called on the products list code from the all products page -->
+				<a href="" class="productListItem">
+					<img src="productListImages/dogHarness.png" alt="harness">
+					<h4 class="productName">Dog Harness</h4>
+					<p class="productDescription">Take your pup along with a harness that keep both you and your best friend comfortable and safe</p>
+					<img src="images/colorOptions.png" alt="colors">
+					<h5 class="price">$200.00</h5>
+				</a>
+				<a href="" class="productListItem">
+					<img src="productListImages/catHarness.png" alt="charness">
+					<h4 class="productName">Cat Harness</h4>
+					<p class="productDescription">Your feline best friend will love to enjoy your adventure safely by your side</p>
+					<img src="images/colorOptions.png" alt="colors">
+					<h5 class="price">$200.00</h5>
+				</a>
+				<a href="" class="productListItem">
+					<img src="productListImages/catBackpack.png" alt="catbp">
+					<h4 class="productName">Cat Backpack</h4>
+					<p class="productDescription">Your wont have to walk if they are feeling extra lazy, just try the cat backpack</p>
+					<img src="images/colorOptions.png" alt="colors">
+					<h5 class="price">$200.00</h5>
+				</a>
+				<a href="" class="productListItem">
+					<img src="productListImages/foodStorageAttachment.png" alt="foodstorage">
+					<h4 class="productName">Food Storage Attachment</h4>
+					<p class="productDescription">While y’all are out on the trail, you carry your own food. 	Now its time for your pet to share the load.</p>
+					<img src="images/colorOptions.png" alt="colors">
+					<h5 class="price">$50.00</h5>
+				</a>
+			</div>
+		</div>
+
+
+	</div>	
+</body>
+</html>
