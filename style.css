@@ -50,6 +50,18 @@ body{
 	/*added cool transitions to keep changes from being so stark*/
 	transition: all .25s;
 }
+#cartButtonOnCart{
+	background-color: #E3C59F;
+	float: right;
+	border-radius: 8px;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border: 2px solid #E3C59F;
+	margin-top: 0;
+	text-decoration: none;
+}
 #cartIconNew{
 	height: 30px;
 	margin: 6px;
@@ -1003,6 +1015,10 @@ hr{
 .removeButton{
 	align-self: flex-start;
 	margin: 12px 0 auto 0;
+}
+.remove:hover h3{
+	color: #E3C59F;
+	transition: .25s;
 }
 /*checkout section*/
 .checkoutPrice{

@@ -6,13 +6,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="main.js"></script>
 </head>
-<body>
+<body onload="pageLoadCart()">
+	<!-- added a function that runs when the page is loaded -->
 	<div class="header">
 		<a href="index.html" id="logo"><img src="icons/Logo.png" alt="logo"></a>
 		<div class="header-right">
 			<input type="text" name="searchBar" placeholder="Search..." id="textInput">
 			<img src="icons/searchIcon.png" alt="cart" id="searchIcon">
-			<a href="cart.html" id="cartButton">
+			<a href="cart.html" id="cartButtonOnCart">
 				<img src="icons/cartIconNew.png" alt="cart" id="cartIconNew">
 				<div id="cartAmount">
 					<p id="cartCount"></p>
@@ -38,34 +39,39 @@
 				<h2 class="cartTitle" id="price">Price</h2>
 			</div>
 			<hr>
-			<div class="cartItem">
-				<!-- used nested flex boxes -->
-				<div class="cartItemMain">
-					<img src="productListImages/productDetailDogHarness1.png" alt="dogharness" class="cartItemImage">
-					<div class="cartItemMainDetails">
-						<h2 class="cartItemName">Dog Harness</h2>
-						<h3 class="cartItemDetails"><span class="cartItemColor">Crazy Berry</span> | <span class="cartItemSize">Large</span></h3>
-					</div>	
-				</div>
-				<h3 class="cartItemQuantity">1</h3>
-				<h3 class="cartItemPrice">$<span class="cartItemPriceNum">200.00</span></h3>
-				<div class="remove">
-					<img src="icons/remove.png" alt="remove button" class="removeButton">
-					<h3>Remove</h3>
-				</div>
+			<div id="cartList">
+				<!-- this HTML is created in JS -->
 
+				<!-- <div class="cartItem">
+					
+					<div class="cartItemMain">
+						<img src="productListImages/productDetailDogHarness1.png" alt="dogharness" class="cartItemImage">
+						<div class="cartItemMainDetails">
+							
+							<h2 class="cartItemName" onclick="navBack()">Dog Harness</h2>
+							<h3 class="cartItemDetails"><span class="cartItemColor">Crazy Berry</span> | <span class="cartItemSize">Large</span></h3>
+						</div>	
+					</div>
+					<h3 class="cartItemQuantity">1</h3>
+					<h3 class="cartItemPrice">$<span class="cartItemPriceNum">200.00</span></h3>
+					<div class="remove">
+						<img src="icons/remove.png" alt="remove button" class="removeButton">
+						<h3>Remove</h3>
+					</div>
+				</div> -->
 			</div>
 			<hr>
 			<div class="checkoutPrice">
 				<div class="checkoutPriceItem">
 					<h2>Shipping:</h2>
-					<h2 class="shippingPrice">$<span class="shippingPriceNum">0.00</span></h2>
+					<h2 class="shippingPrice">$<span class="shippingPriceNum">0</span></h2>
 				</div>
 				<div class="checkoutPriceItem">
-					<h2>Shipping:</h2>
-					<h2 class="totalPrice">$<span class="totalPriceNum">200.00</span></h2>
+					<h2>Toatal:</h2>
+					<h2 class="totalPrice">$<span id="totalPriceNum"></span></h2>
 				</div>
 				<button class="callToAction" id="checkoutButton">CHECKOUT</button>
+				<!-- using button to check js -->
 			</div>
 		</div>
 		<div class="productRelated">
